@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'register_screen.dart';
-import 'choose_role_screen.dart'; // Import halaman Choose Role
+import 'choose_role_screen.dart'; 
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -24,13 +24,11 @@ class LoginScreen extends StatelessWidget {
                   'assets/logo_muara.png', 
                   height: 120, // Ukuran diperbesar dari 80 ke 120
                 ),
-      // Widget Text('MUARA') dihapus agar sesuai permintaan
                ],
               ),
             ),
               const SizedBox(height: 40),
 
-              // Tab Masuk & Daftar
               Row(
                 children: [
                   Container(
@@ -62,7 +60,6 @@ class LoginScreen extends StatelessWidget {
               const Divider(thickness: 1),
               const SizedBox(height: 30),
 
-              // Input Email
               const Text('Email/No Wa', style: TextStyle(fontWeight: FontWeight.w600)),
               const SizedBox(height: 8),
               TextField(
@@ -74,7 +71,6 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Input Password
               const Text('Password', style: TextStyle(fontWeight: FontWeight.w600)),
               const SizedBox(height: 8),
               TextField(
@@ -95,7 +91,6 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Tombol Masuk
               SizedBox(
                 width: double.infinity,
                 height: 52,
@@ -116,7 +111,6 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 30),
 
-              // Divider "Atau Masuk Dengan"
               Row(
                 children: const [
                   Expanded(child: Divider()),
@@ -129,7 +123,6 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Tombol Google & Apple
               Row(
                 children: [
                   Expanded(child: _socialButton('Google', 'assets/google_icon.png')),
@@ -139,7 +132,6 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 40),
 
-              // Belum punya akun
               Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -179,7 +171,6 @@ class LoginScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Image.asset(iconPath, height: 20), 
           const SizedBox(width: 8),
           Text(label, style: const TextStyle(color: Colors.black)),
         ],

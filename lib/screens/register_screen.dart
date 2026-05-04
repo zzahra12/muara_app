@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
-import 'choose_role_screen.dart'; // Pastikan import ini ada
+import 'choose_role_screen.dart'; 
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -22,20 +22,17 @@ Center(
     children: [
       Image.asset(
         'assets/logo_muara.png', 
-        height: 120, // Ukuran diperbesar dari 80 ke 120
+        height: 120,
       ),
-      // Widget Text('MUARA') dihapus agar sesuai permintaan
     ],
   ),
 ),
               const SizedBox(height: 40),
 
-              // Tab Masuk & Daftar
               Row(
                 children: [
                   GestureDetector(
                     onTap: () {
-                      // Kembali ke halaman Login
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) => const LoginScreen()),
@@ -63,7 +60,6 @@ Center(
               const Divider(thickness: 1),
               const SizedBox(height: 20),
 
-              // Input Fields
               _buildInputField('Nama Lengkap', 'Nama kamu'),
               const SizedBox(height: 16),
               _buildInputField('Email/No Wa', 'Email/No Wa kamu'),
@@ -74,13 +70,11 @@ Center(
               
               const SizedBox(height: 30),
 
-              // Tombol Daftar Sekarang
               SizedBox(
                 width: double.infinity,
                 height: 52,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Berpindah ke halaman Pilih Peran (ChooseRoleScreen)
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const ChooseRoleScreen()),

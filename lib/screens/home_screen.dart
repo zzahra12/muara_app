@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart'; // Pastikan file login_screen.dart sudah kamu buat
-import 'register_screen.dart'; // Tambahkan import ini agar tombol Daftar bisa berfungsi
+import 'login_screen.dart'; 
+import 'register_screen.dart'; 
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key}); // Nama Constructor diubah ke HomeScreen
+  const HomeScreen({super.key}); 
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState(); // Diubah ke _HomeScreenState
+  State<HomeScreen> createState() => _HomeScreenState(); 
 }
 
-class _HomeScreenState extends State<HomeScreen> { // Nama State diubah ke _HomeScreenState
+class _HomeScreenState extends State<HomeScreen> { 
   final PageController _pageController = PageController();
   int _currentPage = 0;
 
-  // Data tetap sama sesuai kode aslimu
   final List<Map<String, String>> _onboardingData = [
     {
       'title': 'Temukan Pelangganmu!',
@@ -89,7 +88,6 @@ class _HomeScreenState extends State<HomeScreen> { // Nama State diubah ke _Home
               ),
             ),
 
-            // Indikator Titik
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
@@ -109,7 +107,6 @@ class _HomeScreenState extends State<HomeScreen> { // Nama State diubah ke _Home
                     height: 52,
                     child: ElevatedButton(
                       onPressed: () {
-                        // PINDAH KE HALAMAN DAFTAR (Sesuai image_a75764.png)
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => const RegisterScreen()),

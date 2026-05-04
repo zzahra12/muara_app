@@ -31,7 +31,6 @@ class _ChooseRoleScreenState extends State<ChooseRoleScreen> {
               ),
               const SizedBox(height: 30),
 
-              // Card Pelaku Usaha
               _buildRoleCard(
                 title: 'Pelaku Usaha',
                 imagePath: 'assets/role_usaha.png', 
@@ -40,7 +39,6 @@ class _ChooseRoleScreenState extends State<ChooseRoleScreen> {
 
               const SizedBox(height: 20),
 
-              // Card Investor
               _buildRoleCard(
                 title: 'Investor',
                 imagePath: 'assets/role_investor.png', 
@@ -55,7 +53,6 @@ class _ChooseRoleScreenState extends State<ChooseRoleScreen> {
               ),
               const Spacer(),
 
-              // Tombol Pilih Sekarang
               SizedBox(
                 width: double.infinity,
                 height: 52,
@@ -64,7 +61,6 @@ class _ChooseRoleScreenState extends State<ChooseRoleScreen> {
                     ? null 
                     : () {
                         print("Role dipilih: $selectedRole");
-                        // Navigasi ke Dashboard/Home setelah pilih role
                       },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF5E6DFF),
@@ -93,7 +89,7 @@ class _ChooseRoleScreenState extends State<ChooseRoleScreen> {
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          color: const Color(0xFFFFC107), // Warna kuning seperti di image_9befb0.png
+          color: const Color(0xFFFFC107),
           borderRadius: BorderRadius.circular(20),
           border: isSelected 
               ? Border.all(color: const Color(0xFF5E6DFF), width: 4) 
@@ -102,7 +98,6 @@ class _ChooseRoleScreenState extends State<ChooseRoleScreen> {
         child: Column(
           children: [
             const SizedBox(height: 15),
-            // PROTEKSI GAMBAR: Jika gambar tidak ditemukan, tampilkan icon sementara agar tidak error
             Image.asset(
               imagePath,
               height: 120,
